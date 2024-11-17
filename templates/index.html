@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/app.css') }}">
+</head>
+<body>
+    
+    <section id="search-game">
+        <button id="searchGame">Buscar partida</button>
+    </section>
+    <section id="game">
+        <div class="side enemy">
+            <div class="cards" id="enemy-cards"></div>
+            <div class="timer">
+                <div id="turn-counter">00:30</div>
+                <div id="scoreboard">0 / 0</div>
+            </div>
+        </div>
+        <div class="side player">
+            <div class="cards" id="player-cards"></div>
+            <button id="buyCard">Comprar carta</button>
+        </div>
+
+    </section>
+
+    <!-- <ul>
+        <li>Player ID: #{{user_id}}</li>
+        <li>Search game: <span id="search-status">-</span></li>
+        <li>Game info: <span id="game-info">-</span></li>
+        <li>Game Status: <span id="game-status">-</span></li>
+    </ul> -->
+
+    <script>const user_id = '{{user_id}}'</script>
+    <script src="{{ url_for('static', path='/app.js') }}"></script>
+    
+</body>
+</html>

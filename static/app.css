@@ -1,0 +1,56 @@
+#game {
+    width: 300px;
+    height: 500px;
+    background-color: #009688;
+    display: none;
+}
+#game.running {
+    display: block;
+}
+
+#game .side {
+    width: calc(100% - 40px);
+    height: calc(250px - 40px);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#game .side.enemy {
+    border-bottom: 1px solid #00000036;
+}
+
+#game .side.player {
+    align-items: end;
+}
+
+#game .side .cards .card {
+    display: inline-block;
+    border: 2px solid #000000;
+    width: 30px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px; 
+    border-radius: 3px;
+}
+
+#game .side.enemy .cards .card {
+    background-color: #F44336;
+}
+
+#game .side.player .cards .card {
+    background-color: #2196F3;
+}
+
+#search-game.game_found {
+    display: none;
+}
+
+#buyCard {
+    border: 2px solid black;
+    border-radius: 3px;
+    background-color: #ffc107;
+    padding: 10px;
+    cursor: pointer;
+}
